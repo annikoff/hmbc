@@ -1,0 +1,9 @@
+[package]
+name = "hmbc"
+version = "0.1.0"
+authors = ["Yakov Annikov <annikoff@ya.ru>"]
+
+[dependencies]
+time = "0.1"
+sha1 = { version = "0.6.0", features = ["std"] }
+bincode = "1.0.0"
