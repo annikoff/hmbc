@@ -1,5 +1,6 @@
 pub mod block;
 pub mod block_content;
+pub mod blockchain;
 use block::Block;
 
 fn main() {

@@ -4,6 +4,7 @@ extern crate sha1;
 
 use block_content::BlockContent;
 
+#[derive(Clone, Debug)]
 pub struct Block {
     index: i64,
     timestamp: i64,
@@ -30,7 +31,8 @@ impl Block {
             timestamp,
             previous_hash: previous_hash.to_string(),
             hash,
-            content: block_content }
+            content: block_content
+        }
     }
 
     pub fn index(&self) -> i64 {
