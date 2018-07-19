@@ -17,7 +17,7 @@ impl Block {
     pub fn new(index: i64, previous_hash: &String, content: &String) -> Block {
         let timestamp = time::now_utc().to_timespec().sec;
         let block_content = BlockContent::new(content);
-        let mut content_for_hash: String = "hello ".to_owned();
+        let mut content_for_hash: String = "".to_owned();
 
         content_for_hash.push_str(&index.to_string());
         content_for_hash.push_str(&timestamp.to_string());
