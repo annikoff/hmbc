@@ -1,12 +1,14 @@
-pub mod block;
-pub mod block_content;
-pub mod blockchain;
-use block::Block;
+mod block;
+mod block_content;
+mod blockchain;
+use blockchain::Blockchain;
 
 fn main() {
-    let content = String::from("content");
-    let hash = String::from("hash");
-    let block = Block::new(0, &hash, &content);
+    let content1 = String::from("content1");
+    let content2 = String::from("content2");
+    let mut blockchain = Blockchain::new();
+    blockchain.create_block(&content1);
+    blockchain.create_block(&content2);
 
-    println!("The block index ({})", block.index());
+    println!("The blockchain ({:?})", blockchain.blocks());
 }
